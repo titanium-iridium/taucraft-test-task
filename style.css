@@ -1,30 +1,30 @@
 html, body {
-	width: 100%;
+	/*width: 100%;*/
 }
 
 body {
 	padding: 22px;
 	background-color: #fff;
 	color: #333;
-	font: normal 16px Arial;
 }
 
+body, th, td, div {
+	font: normal 16px arial;
+}
 
 td {
-	/*float: left;*/
-	width: 288px;
+	width: 296px;
 	border-left: 1px dotted #333;
 	padding: 0;
 	vertical-align: top;
 }
-
 
 th {
 	border-bottom: 1px dotted #333;
 	border-left: 1px dotted #333;
 	text-align: center;
 	padding: 11px 0;
-	font-size: 1.2em;
+	font-size: 1.3em;
 }
 
 .first {
@@ -32,22 +32,58 @@ th {
 }
 
 .item {
-	width: 252px;
+	width: 260px;
 	border: 1px solid #333;
-	background-color: #AAD6FF;
+	background-color: #aad6ff;
 	margin: 11px;
-	padding: 7px;
-	cursor: move;
 }
 
 .bug {
-	background-color: #FFC8BD;
+	background-color: #ffc8bd;
 }
 
-.item .id:before {
+.handle {
+	background-color: #666;
+	width: 100%;
+	height: 16px;
+	cursor: move;
+}
+
+.item .content {
+	padding: 7px;
+}
+
+.id:before {
 	content: "#";
 }
 
-.item div {
+.param {
 	clear: both;
+	padding: 2px 4px;
+	cursor: default;
+	border: 1px solid #aad6ff;
+}
+
+.bug .param {
+	border: 1px solid #ffc8bd;
+}
+
+.param:hover {
+	border: 1px dotted #666;
+	/*background-color: #B9E5FF;*/
+
+	/*cursor: default;*/
+}
+
+/*.bug .param:hover {*/
+	/*background-color: #FFDDD2;*/
+	/*border: 1px dotted #666;*/
+/*}*/
+
+.drop-here {
+	background-color: #dfd;
+}
+
+.editable {
+	background-color: #f0f0f0;
 }

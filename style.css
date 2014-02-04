@@ -1,0 +1,53 @@
+html, body {
+	width: 100%;
+}
+
+body {
+	padding: 22px;
+	background-color: #fff;
+	color: #333;
+	font: normal 16px Arial;
+}
+
+
+td {
+	/*float: left;*/
+	width: 288px;
+	border-left: 1px dotted #333;
+	padding: 0;
+	vertical-align: top;
+}
+
+
+th {
+	border-bottom: 1px dotted #333;
+	border-left: 1px dotted #333;
+	text-align: center;
+	padding: 11px 0;
+	font-size: 1.2em;
+}
+
+.first {
+	border-left: none;
+}
+
+.item {
+	width: 252px;
+	border: 1px solid #333;
+	background-color: #AAD6FF;
+	margin: 11px;
+	padding: 7px;
+	cursor: move;
+}
+
+.bug {
+	background-color: #FFC8BD;
+}
+
+.item .id:before {
+	content: "#";
+}
+
+.item div {
+	clear: both;
+}

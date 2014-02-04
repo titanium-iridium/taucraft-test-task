@@ -17,7 +17,40 @@ if (!window.File || !window.FileReader) {
 //	reader.readAsText(file);
 
 	$.get('/data.json', function(data) {
-		var tasks = JSON.parse(data);
-//		console.log(tasks);
+		var all = JSON.parse(data);
+//		console.log(all);
+		if (!all || !all.length) return;
+		var i, status, k, item,
+			cellClass = ' class="first"',
+			$table = $('<table></table>'),
+			$headRow = $('<tr></tr>'),
+			$dataRow = $('<tr></tr>'),
+			$td;
+		for (i = 0; i < all.length; i++) {
+			status = all[i];
+			$('<th' + cellClass + '>' + status.name + '</th>').appendTo($headRow);
+			$td = $('<td' + cellClass + '></td>');
+			for (k = 0; k < status.items.length; k++) {
+				item = status.items[k];
+				console.log(item);
+
+				$td.append('<div class="item '+ item.type + '">'
+					+ '<div class="id">' + item.id + '</div>'
+					+ '<div class="name">' + item.name + '</div>'
+					+ '</div>'
+				);
+
+//				$column.attr('class', item.type);
+				$td.appendTo($dataRow);
+			}
+
+			cellClass = '';
+		}
+
+		$headRow.appendTo($table);
+		$dataRow.appendTo($table);
+		$table.appendTo('body');
+
+
 	});
 }

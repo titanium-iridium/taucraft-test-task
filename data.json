@@ -3,17 +3,17 @@
 		"name": "ToDo",
 		"items": [
 			{
-				"id": 1,
+				"id": "#1",
 				"name": "Reach the speed of light",
 				"type": "task"
 			},
 			{
-				"id": 2,
+				"id": "#2",
 				"name": "Implement non-binary logic thinking",
 				"type": "bug"
 			},
 			{
-				"id": 3,
+				"id": "#3",
 				"name": "Probe a black hole",
 				"type": "task"
 			}
@@ -23,12 +23,12 @@
 		"name": "In Progress",
 		"items": [
 			{
-				"id": 4,
+				"id": "#4",
 				"name": "Repair the oven (highest priority)",
 				"type": "bug"
 			},
 			{
-				"id": 5,
+				"id": "#5",
 				"name": "Create a real AI",
 				"type": "task"
 			}
@@ -38,17 +38,17 @@
 		"name": "Done",
 		"items": [
 			{
-				"id": 6,
+				"id": "#6",
 				"name": "Catch an intergalactic neutrino",
 				"type": "task"
 			},
 			{
-				"id": 7,
+				"id": "#7",
 				"name": "Search for the Higgs boson",
 				"type": "task"
 			},
 			{
-				"id": 8,
+				"id": "#8",
 				"name": "Get rid of geocentric model",
 				"type": "bug"
 			}

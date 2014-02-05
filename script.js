@@ -1,7 +1,5 @@
 /*global jQuery, $ */
 
-var drag = null; // will point to currently dragged item
-
 
 // populate task table and prepare it for interaction
 var populate = function(data) {
@@ -18,7 +16,7 @@ var populate = function(data) {
 	for (i = 0; i < data.length; i++) { // per-status cycle
 		status = data[i];
 		$('<th' + cellClass + '>' + status.name + '</th>').appendTo($headRow);
-		$td = $('<td' + cellClass + '></td>');
+		$td = $('<td' + cellClass + '><div class="dummy">&nbsp;</div></td>').addClass('items');
 
 		for (k = 0; k < status.items.length; k++) { // per-task cycle
 			item = status.items[k];
@@ -40,40 +38,27 @@ var populate = function(data) {
 	$dataRow.appendTo($table);
 	$table.appendTo('body');
 
-//	$table.on('mousedown', function(e) {
-//		var $target = $(e.target);
-//		if (!$target.is('.handle')) return;
-//		// start drag operation
-//		drag = $target.closest('.item');
-//		console.log(drag);
-//		e.preventDefault();
-//	}).on('mouseup', function(e) {
-//		if (!$(e.target).is('.handle')) return;
-//		// finish drag operation
-//		drag = null;
-//	});
-
-
-
-//	$('.item').draggable({handle:'.handle'});
-
-
-	$('.item').each(function() {
-		new Draggable(this, $('.handle', $(this)).get(0));
+	$('.item').draggable({
+		handle: '.handle'
+//		onDragSuccess: function() {
+//			$(this).find('.dummy').remove();
+//			$('td.items').each(function() {
+//				var $td = $(this);
+//				if (!$('.item', $td).length) $td.html('<div class="dummy">&nbsp;</div>');
+//			});
+//		}
 	});
 
-	$('td').each(function() {
-		new DropTarget(this);
-	});
+	$('td.items').dropTarget();
+
 
 	$table.on('click', function(e) {
 		var $target = $(e.target);
 		if ($target.is('.param')) {
-			$('.editable').attr('contenteditable', 'false').removeClass('editable');
-			$target.attr('contenteditable', 'true').addClass('editable');
+			$('#editable').attr('contenteditable', '').attr('id', '');
+			$target.attr('contenteditable', 'true').attr('id', 'editable');
 		}
 	});
-
 
 };
 

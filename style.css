@@ -43,7 +43,7 @@ th {
 }
 
 .handle {
-	background-color: #666;
+	background-color: #464C5A;
 	width: 100%;
 	height: 16px;
 	cursor: move;
@@ -53,9 +53,6 @@ th {
 	padding: 7px;
 }
 
-.id:before {
-	content: "#";
-}
 
 .param {
 	clear: both;
@@ -80,10 +77,14 @@ th {
 	/*border: 1px dotted #666;*/
 /*}*/
 
-.drop-here {
+.drag-drop-target-active {
 	background-color: #dfd;
 }
 
-.editable {
+#editable {
 	background-color: #f0f0f0;
+}
+
+.dummy {
+	height: 1px;
 }

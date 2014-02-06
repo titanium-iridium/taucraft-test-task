@@ -12,6 +12,16 @@ body, th, td, div {
 	font: normal 16px arial;
 }
 
+a {
+	color: #333;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: red;
+	text-decoration: none;
+}
+
 td {
 	width: 296px;
 	border-left: 1px dotted #333;
@@ -31,14 +41,51 @@ th {
 	border-left: none;
 }
 
-.item {
-	width: 260px;
-	border: 1px solid #333;
-	background-color: #aad6ff;
-	margin: 11px;
+button {
+	cursor: pointer;
+	border: 1px solid #464C5A;
 }
 
-.bug {
+button.new {
+	background-color: #aad6ff;
+	padding: 4px 8px;
+	font-size: 2em;
+	margin: 7px 11px;
+	line-height: 22px;
+}
+
+button:hover {
+	color: #f33;
+}
+
+button.delete {
+	position: absolute;
+	top: 0;
+	right: 2px;
+	font-size: 0.9em;
+	font-weight: bold;
+	width: 15px;
+	height: 15px;
+	line-height: 10px;
+	/*display: block;*/
+	padding: 0;
+}
+
+tr.new td {
+	text-align: center;
+	border-bottom: 1px dotted #666;
+}
+
+
+.item {
+	width: 260px;
+	border: 1px solid #464C5A;
+	background-color: #aad6ff;
+	margin: 11px;
+	position: relative;
+}
+
+.bug, button.bug {
 	background-color: #ffc8bd;
 }
 
@@ -87,4 +134,9 @@ th {
 
 .dummy {
 	height: 1px;
+}
+
+.clear-data {
+	float: right;
+	display: none;
 }

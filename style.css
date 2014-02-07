@@ -1,0 +1,142 @@
+html, body {
+	/*width: 100%;*/
+}
+
+body {
+	padding: 22px;
+	background-color: #fff;
+	color: #333;
+}
+
+body, th, td, div {
+	font: normal 16px arial;
+}
+
+a {
+	color: #333;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: red;
+	text-decoration: none;
+}
+
+td {
+	width: 296px;
+	border-left: 1px dotted #333;
+	padding: 0;
+	vertical-align: top;
+}
+
+th {
+	border-bottom: 1px dotted #333;
+	border-left: 1px dotted #333;
+	text-align: center;
+	padding: 11px 0;
+	font-size: 1.3em;
+}
+
+.first {
+	border-left: none;
+}
+
+button {
+	cursor: pointer;
+	border: 1px solid #464C5A;
+}
+
+button.new {
+	background-color: #aad6ff;
+	padding: 4px 8px;
+	font-size: 2em;
+	margin: 7px 11px;
+	line-height: 22px;
+}
+
+button:hover {
+	color: #f33;
+}
+
+button.delete {
+	position: absolute;
+	top: 0;
+	right: 2px;
+	font-size: 0.9em;
+	font-weight: bold;
+	width: 15px;
+	height: 15px;
+	line-height: 10px;
+	/*display: block;*/
+	padding: 0;
+}
+
+tr.new td {
+	text-align: center;
+	border-bottom: 1px dotted #666;
+}
+
+
+.item {
+	width: 260px;
+	border: 1px solid #464C5A;
+	background-color: #aad6ff;
+	margin: 11px;
+	position: relative;
+}
+
+.bug, button.bug {
+	background-color: #ffc8bd;
+}
+
+.handle {
+	background-color: #464C5A;
+	width: 100%;
+	height: 16px;
+	cursor: move;
+}
+
+.item .content {
+	padding: 7px;
+}
+
+
+.param {
+	clear: both;
+	padding: 2px 4px;
+	cursor: default;
+	border: 1px solid #aad6ff;
+}
+
+.bug .param {
+	border: 1px solid #ffc8bd;
+}
+
+.param:hover {
+	border: 1px dotted #666;
+	/*background-color: #B9E5FF;*/
+
+	/*cursor: default;*/
+}
+
+/*.bug .param:hover {*/
+	/*background-color: #FFDDD2;*/
+	/*border: 1px dotted #666;*/
+/*}*/
+
+.drag-drop-target-active {
+	background-color: #dfd;
+}
+
+#editable {
+	background-color: #f0f0f0;
+}
+
+.dummy {
+	height: 1px;
+}
+
+.clear-data {
+	float: right;
+	display: none;
+}
